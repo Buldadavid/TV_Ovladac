@@ -1,5 +1,9 @@
+h1   {color: white;
+    font: 45px Times;
+    font-weight: bold;
+    text-align:center;
+}
 body {
-text-align: left;
 background-color: #444444;
 font: Arial, sans-serif;
 }
