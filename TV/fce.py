@@ -50,7 +50,7 @@ def program():
     print("program")
     os.system("wget http://localhost:9981/xmltv/channels --user=admin --password=admin -O /home/pi/TV/Programy/iptvGuide.xml")
     os.system("python3 /home/pi/TV/epg.py")
-    return redirect("http://10.0.0.200/epg.php")
+    return render_template('epg.html')
 
 @app.route('/NOVA', methods = ['POST', 'GET'])
 def NOVA():
