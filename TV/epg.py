@@ -23,7 +23,7 @@ with open('epg.html', 'a') as ff:
     ff.write('<meta charset="8859">\n')
     ff.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
     ff.write('<title>Ovladač</title>\n')
-    ff.write('</head><style></style><body><table>\n')
+    ff.write('</head><style></style><body><h1>TV EPG</h1><table>\n')
     ff.close() 
 
 for programme in root.findall('programme'):
