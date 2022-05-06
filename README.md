@@ -8,7 +8,7 @@
 - upravit v fce.py /prog
     smazat staženi iptv.xml
 - upravit epg.py - stahne se iptv.xml jen pokud je potřeba iptv.xml obsahuje epg na celý týden
-- v EPG se dá kliknou na porat a prepne se telka
+- v EPG se dá kliknou na ZELENÝ pořat a telka se přepne
 
 - epg.py - mělo by to fungovat
 ```
@@ -72,9 +72,12 @@ for programme in root.findall('programme'):
         else:
             barva = "nic2"
 
-        with open('epg.html', 'a') as ff:
-            ff.write(f"<tr><td id= '{barva}'><a href='http://10.0.0.200:5000/{route}'><input type='submit' value='{kanal} {za} {ko} {porad}' id= '{barva}'></a></td></tr>\n")
-            ff.close()            
+            if barva == "nic":
+                ff.write(f"<tr><td id= '{barva}'><a href='http://10.0.0.200:5000/{route}'><input type='submit' value='{kanal} {za} {ko} {porad}' id= '{barva}'></a></td></tr>\n")
+                ff.close()
+            if barva == "nic2":
+                ff.write(f"<tr><td id= '{barva}'>{kanal} {za} {ko} {porad}'</td></tr>\n")
+                ff.close()             
 
     if channel == "36e6c878e5fef604094a70bacee2cd6c" and start[6:8] == d1 and int(start[8:10])<ctimee and ko>=cctime:
         kanal = "ČT1"
