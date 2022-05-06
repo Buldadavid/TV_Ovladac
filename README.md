@@ -18,3 +18,10 @@ else:
     #os.system("wget http://localhost:9981/xmltv/channels --user=admin --password=admin -O /home/pi/TV/Programy/iptvGuide.xml")
     ## sem dát zbytek fce
 ```
+- nebo jeste muzu skusit aby se dalo v EPG kliknou na porat a prepla by se telka
+upravit v epg.py
+```
+ff.write(f"<tr><td id= '{barva}'><a href='http://10.0.0.200:5000/JMENO PROGRAMU'><input type='submit' value='{kanal} {za} {ko} {porad}'></a></td></tr>\n")
+
+```
+- JMENO PROGRAMU jeste neumim udelat
