@@ -9,14 +9,6 @@
 - upravit v fce.py /prog
     smazat staženi iptv.xml
 - v EPG se dá kliknou na porat a prepne se telka
-upravit v epg.py
-```
-ff.write(f"<tr><td id= '{barva}'><a href='http://10.0.0.200:5000/{route}'><input type='submit' value='{kanal} {za} {ko} {porad}' id= '{barva}'></a></td></tr>\n")
-
-            kanal = "ČT1"
-            route = "CT_1_HD_T2"
-            fce()
-```
 - epg.py - mělo by to fungovat
 ```
 import xml.etree.ElementTree as ET
