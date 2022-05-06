@@ -123,7 +123,7 @@ if m1 < stopL[4:8] :
         ff.write('</html>\n')
         ff.close() 
 
-        #os.system("mv epg.html /home/pi/TV/templates/epg.html")
+        os.system("mv epg.html /home/pi/TV/templates/epg.html")
 else:
     print("uz ne")
     os.system("wget http://localhost:9981/xmltv/channels --user=admin --password=admin -O /home/pi/TV/Programy/iptvGuide.xml")
