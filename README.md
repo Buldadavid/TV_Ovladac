@@ -5,10 +5,11 @@
 - IP address (flask) 10.0.0.200:5000
 
 # ToDOList
-- upravit epg.py - stahne se iptv.xml jen pokud je potřeba iptv.xml obsahuje epg na celý týden
 - upravit v fce.py /prog
     smazat staženi iptv.xml
+- upravit epg.py - stahne se iptv.xml jen pokud je potřeba iptv.xml obsahuje epg na celý týden
 - v EPG se dá kliknou na porat a prepne se telka
+
 - epg.py - mělo by to fungovat
 ```
 import xml.etree.ElementTree as ET
