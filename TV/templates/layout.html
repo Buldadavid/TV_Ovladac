@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="8859">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ovladač</title>
+    </head>
+    <style>
+        h1{color: white;
+            font: 45px Times;
+            font-weight: bold;
+            text-align:center;
+        }
+        body {
+            background-color: #444444;
+            font: Arial, sans-serif;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100px;
+        }
+        #greet1 {
+            background-color: #222222;
+            border:  none;
+            border-radius: 5px;
+            color: white;
+            font: 20px Arial, sans-serif;
+            height: 50px;
+            width: 100%;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        table, td {
+            border: 1px solid black;
+        }
+        tr{height: 60px;}
+        #nic{
+            background-color: #91ffaf;
+            color: black;
+        }
+        #nic2{
+            color: white;
+        }
+        input[type=submit] {
+           background-color: transparent; border-color: transparent; font: 17px Arial, sans-serif;width: 10%;height: 10%;
+        }
+    </style>
+    <body>
+        {% block body%} {% endblock%}
+    </body>
+</html>
