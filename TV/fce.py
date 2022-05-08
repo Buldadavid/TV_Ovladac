@@ -68,14 +68,14 @@ def program():
     ctimee = (int(ctime) +3)
     #print(ctimee)
 
-    tree = ET.parse('/home/pi/TV/Programy/iptvGuide.xml')
-    root = tree.getroot()
-    #print(root)
-    prog = [programme for programme in tree.findall('programme')]
-
-    last = prog[-1]
-    stopL = last.attrib['stop']
-    #print(stopL[4:8])
+    creat = time.ctime(os.path.getctime("/home/pi/TV/Programy/iptvGuide.xml"))
+    #print(creat)
+    time_string = str(creat)
+    result = time.strptime(time_string, "%a %b %d %H:%M:%S %Y")
+    stop1 = time.strftime("%m", result)
+    stop2 = time.strftime("%d", result)
+    stopL = stop1 + str(int(stop2) + 5)    
+    #print(stopL)
 
     if m1 < stopL[4:8] :
         print("jeste jo")
