@@ -486,6 +486,14 @@ def UKRAJINSKE_RADIO():
      os.system('xdg-open /home/pi/TV/Programy/UKRAJINSKE_RADIO')
      return redirect('/')
 
+@app.route('/kill', methods = ['POST', 'GET'])
+def KILL():
+     print('kill')
+     os.system("echo 'standby 0.0.0.0' | cec-client -s -d 1")
+     time.sleep(4)
+     os.system("sudo shutdown -h now")
+     return redirect('/')
+    
 if app.config["DEBUG"]:
     @app.after_request
     def after_request(response):
