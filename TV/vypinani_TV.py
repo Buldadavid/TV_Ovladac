@@ -16,6 +16,8 @@ root.geometry('320x50')
 def vypnout():
     print("off")
     root.destroy()
+    os.system("echo 'standby 0.0.0.0' | cec-client -s -d 1")
+    time.sleep(4)
     os.system("sudo shutdown -h now")
     
 def ne():
@@ -31,6 +33,8 @@ def countdown(count):
         
     if count == 0:
         print("off")
+        os.system("echo 'standby 0.0.0.0' | cec-client -s -d 1")
+        time.sleep(4)
         os.system("sudo shutdown -h now")
         root.destroy()
 
