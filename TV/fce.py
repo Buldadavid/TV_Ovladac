@@ -75,7 +75,7 @@ def program():
     result = time.strptime(time_string, "%a %b %d %H:%M:%S %Y")
     stop1 = time.strftime("%m", result)
     stop2 = time.strftime("%d", result)
-    stopL = stop1 + str(int(stop2) + 5)    
+    stopL = stop1 + "0" +str(int(stop2) + 5)   
     #print(stopL)
 
     if m1 < stopL[4:8] :
