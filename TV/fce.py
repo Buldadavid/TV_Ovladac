@@ -60,6 +60,7 @@ def program():
     today = date.today()
     d1 = today.strftime("%d")
     m1 = today.strftime("%m%d")
+    M1 = today.strftime("%-m%-d")
     #print(d1)
     #print(m1)
 
@@ -73,12 +74,12 @@ def program():
     #print(creat)
     time_string = str(creat)
     result = time.strptime(time_string, "%a %b %d %H:%M:%S %Y")
-    stop1 = time.strftime("%m", result)
-    stop2 = time.strftime("%d", result)
-    stopL = stop1 + "0" +str(int(stop2) + 5)   
+    stop1 = time.strftime("%-m", result)
+    stop2 = time.strftime("%-d", result)
+    stopL = stop1 +str(int(stop2) + 5)    
     #print(stopL)
-
-    if m1 < stopL[4:8] :
+    
+    if M1 < stopL :
         print("jeste jo")
         
     else:
